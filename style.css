@@ -47,11 +47,15 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: aqua;
 }
 
 header {
   padding: var(--space-lg) var(--container-padding);
   text-align: center;
+  font-family: 'Title Text', sans-serif;
+  font-size: medium;
+  font-style: italic;
 }
 
 footer {
@@ -103,12 +107,26 @@ footer {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+
+  font-family: 'Body Text', sans-serif;
+  border: 2px solid #000;
+  border-radius: 5%;
+  background-color:burlywood
+}
+
+.panel img {
+  border: 2px solid #000;
+  border-radius: 25%;
+  box-shadow: #000 0px 4px 12px;
+  align-self: center;
+  background-color:white;
 }
 
 /* Panel headings */
 .panel h2 {
   /* Spacing only - you'll add typography styles */
   margin-bottom: var(--space-xs);
+  font-family: 'Title Text', sans-serif;
 }
 
 /* ============================================
@@ -123,6 +141,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+
+  font-family: 'Title Text', sans-serif;
 }
 
 /* ============================================
@@ -145,6 +165,7 @@ footer {
 .panel figcaption {
   /* Basic spacing - you'll add typography */
   margin-top: var(--space-xs);
+  font-size: small;
 }
 
 /* ============================================
@@ -154,6 +175,7 @@ footer {
 .panel p {
   /* Basic spacing - you'll add typography */
   margin-top: var(--space-xs);
+  font-style: italic;
 }
 
 /* ============================================
@@ -176,6 +198,22 @@ footer {
   }
 }
 
+@font-face {
+  font-family: 'Title Text';  /* Name you'll use in CSS */
+  src: url('../fonts/Ubuntu-Regular.woff2') format('woff2');  /* CHECK THIS PATH! */
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;  /* Prevents invisible text during load */
+}
+
+@font-face {
+  font-family: 'Body Text';  /* Name you'll use in CSS */
+  src: url('../fonts/MomoTrustSans-VariableFont_wght.woff2') format('woff2');  /* CHECK THIS PATH! */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;  /* Prevents invisible text during load */
+}
+
 /* ============================================
    UTILITY CLASSES (Optional)
    Uncomment if you want flexibility
@@ -186,10 +224,14 @@ footer {
   (Only use if you need precise control)
 */
 
-/*
+
 @media (min-width: 768px) {
   .story-grid.two-column {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    font-size: large;
   }
 }
 
@@ -197,8 +239,12 @@ footer {
   .story-grid.three-column {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  header {
+    font-size: xx-large;
+  }
 }
-*/
+
 
 /* ============================================
    NOTES FOR STUDENTS
